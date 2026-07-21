@@ -1,4 +1,3 @@
-import { Spinner } from '@/components/Spinner'
 import styles from './LoadMoreButton.module.css'
 
 interface LoadMoreButtonProps {
@@ -32,7 +31,15 @@ export function LoadMoreButton({
           onClick={onClick}
           disabled={isLoading}
         >
-          {isLoading ? <Spinner size={22} /> : 'Load More'}
+          <img
+            src="/pokeball.svg"
+            alt=""
+            aria-hidden="true"
+            className={
+              isLoading ? `${styles.icon} ${styles.iconSpin}` : styles.icon
+            }
+          />
+          {isLoading ? 'Loading…' : 'Load More'}
         </button>
       ) : (
         <p className={styles.done}>You've caught 'em all! 🎉</p>

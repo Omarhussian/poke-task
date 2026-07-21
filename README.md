@@ -19,13 +19,13 @@ It implements the Front-End assessment requirements:
 | Routing | React Router v6 (separate detail route) |
 | Data | **React Query** (caching, `keepPreviousData`, infinite query) |
 | Resilience | **Error Boundaries** + `withAsyncBoundary` (Suspense) HOCs |
-| Layout | **Tailwind CSS** (`tailwind.config.ts`) for the responsive grid/shell |
+| Layout | **Tailwind CSS** (`tailwind.config.ts`) for the app shell, spacing & animations |
 | Component styling | **CSS Modules** per component |
 | Composition | **Higher-Order Components** (`withErrorBoundary`, `withAsyncBoundary`) |
 
 ### Styling split
-- **Tailwind** drives the app *layout* — the responsive container, grid columns, breakpoints and spacing (see `tailwind.config.ts` and the grid utilities in `PokemonGrid`/`Layout`).
-- **CSS Modules** own each component's visual detail (cards, badges, buttons, detail page), keeping styles scoped and colocated.
+- **Tailwind** drives the app *shell* — the responsive container, flex layout, spacing and entrance animations (see `tailwind.config.ts` and the utilities in `Layout`).
+- **CSS Modules** own each component's visual detail (cards, badges, buttons, detail page) as well as the responsive grid columns (`PokemonGrid.module.css`), keeping styles scoped and colocated.
 
 ## Project structure
 

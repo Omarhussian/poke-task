@@ -22,6 +22,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.6rem;
   padding: 0.85rem 2rem;
   border: none;
   border-radius: 999px;
@@ -48,6 +49,28 @@
 .button:disabled {
   cursor: progress;
   opacity: 0.9;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.iconSpin {
+  animation: spin 0.9s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .iconSpin {
+    animation: none;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .done {

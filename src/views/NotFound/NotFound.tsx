@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 import { ErrorState } from '@/components/ErrorState'
+import styles from './NotFound.module.css'
 
 export function NotFound() {
   return (
@@ -9,18 +10,8 @@ export function NotFound() {
         title="Page not found"
         message="This route doesn't exist. Let's head back to the Pokédex."
       />
-      <div style={{ textAlign: 'center', marginTop: '-1rem' }}>
-        <Link
-          to="/"
-          style={{
-            display: 'inline-block',
-            padding: '0.6rem 1.4rem',
-            borderRadius: 999,
-            background: '#ef4444',
-            color: '#fff',
-            fontWeight: 600,
-          }}
-        >
+      <div className={styles.actions}>
+        <Link to="/" className={styles.homeLink}>
           Back to home
         </Link>
       </div>

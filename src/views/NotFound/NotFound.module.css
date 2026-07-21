@@ -1,0 +1,25 @@
+.actions {
+  margin-top: -1rem;
+  text-align: center;
+}
+
+.homeLink {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: var(--color-brand, #ef4444);
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 8px 18px -8px rgba(239, 68, 68, 0.7);
+}
+
+.homeLink:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px -8px rgba(239, 68, 68, 0.8);
+}
+
+.homeLink:active {
+  transform: translateY(0);
+}
